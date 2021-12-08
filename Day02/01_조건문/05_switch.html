@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script>
+
+        // Number() : ? -> 숫자형 자료형으로 변환하는 메서드
+        const input = Number(prompt('숫자를 입력하세요.','숫자'))
+
+        // switch( 식 ) { case 값 : ~ }
+        // : 식과 값이 일치하는 case 문으로 이동한다.
+
+        // break
+        // : 제어문( 조건문, 반복문 )을 탈출하는 키워드
+        switch (input % 2) {
+            case 0:
+                alert('짝수 입니다')
+                break;
+            case 1:
+                alert('홀수 입니다')
+                // break;
+            default:
+                alert('숫자가 아닙니다')
+                break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
