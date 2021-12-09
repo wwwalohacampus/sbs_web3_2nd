@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>콜백함수</title>
+    <script>
+        // 함수 선언
+        function callThreeTimes(callback) {
+
+            for (let i = 0; i < 3; i++) {
+                callback(i)
+            }
+
+        }
+
+        // 함수 호출
+        callThreeTimes(
+            function (i) {
+                console.log(`${i} 번째 함수 호출`)
+            }
+        )
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
