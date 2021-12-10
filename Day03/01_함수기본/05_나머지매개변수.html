@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>나머지 매개변수</title>
+    <script>
+        // ...items : 나머지 매개변수
+        // - 전달된 인자들을 배열로 가져옵니다.
+        function sample(...items) {
+            console.log(items)
+            
+            for (let i = 0; i < items.length; i++) {
+                console.log(items[i]);
+            }
+        }
+
+        sample(1,2)
+        sample(1,2,3)
+        sample(1,2,3,4)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

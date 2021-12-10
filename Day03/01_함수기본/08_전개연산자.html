@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>전개 연산자</title>
+    <script>
+
+        // 전개연산자로 전달한 값을 나머지 매개변수로 전달 받음
+        function sample( ...items ) {
+            console.log('items[0] : ' + items[0])
+            console.log('items[1] : ' + items[1])
+            console.log('items[2] : ' + items[2])
+            console.log('items[3] : ' + items[3])
+        }
+
+        const arr = [1,2,3,4]
+
+        // 전개 연산자
+        // : 배열의 요소를 하나씩 펼쳐서(전개해서) 전달한다.
+        sample( ...arr )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
