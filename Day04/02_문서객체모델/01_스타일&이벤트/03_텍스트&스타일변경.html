@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMContentLoaded</title>
+
+    <script>
+       // DOMContentLoaded 이벤트를 연결합니다.
+       document.addEventListener('DOMContentLoaded', () => {
+            // 요소를 읽어온다.
+            const h1 = document.querySelector('h1')         // $(h1)
+
+            h1.textContent = '내일은 문서객체 모델을 알아보겠습니다.'
+            h1.style.color = 'white'
+            h1.style.backgroundColor = 'black'
+            h1.style.padding = '20px'
+
+       })
+      
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

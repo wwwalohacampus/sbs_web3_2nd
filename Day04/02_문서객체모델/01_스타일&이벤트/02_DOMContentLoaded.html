@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMContentLoaded</title>
+
+    <script>
+       // DOMContentLoaded 이벤트를 연결합니다.
+       document.addEventListener('DOMContentLoaded', () => {
+            // createElement() : 문서 객체 생성하기
+            const h1 = document.createElement('h1')
+
+            // <h1>DOMContentLoaded 이벤트 발생</h1>
+            h1.textContent = 'DOMContentLoaded 이벤트 발생'
+
+            // appendChild() : 문서 객체 배치하기
+            document.body.appendChild(h1)
+
+       })
+
+       /*
+       제이쿼리로 작성한 문서 준비 이벤트
+       $(function() {
+
+       })
+       */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
