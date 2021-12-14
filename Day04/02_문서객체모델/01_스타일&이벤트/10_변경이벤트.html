@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변경 이벤트</title>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', () => {
+           
+            const select = document.querySelector('select')
+            const p = document.querySelector('p')
+
+            select.addEventListener('change', (event) => {
+                // event.currentTarget : 이벤트가 발생한 현재 요소 (여기서는 select)
+                // select.options : option 요소를 리스트로 가져온다
+                // event.currentTarget.options.selectedIndex : 선택된 option 의 순서 번호
+                const options = event.currentTarget.options              // ['설렁탕','죽','김볶밥','떡볶이','카레우동']
+                const index = event.currentTarget.options.selectedIndex  // 현재 선택된 옵션의 순서번호
+
+                p.textContent = `선택 : ${options[index].textContent}`
+            })
+
+        })
+    </script>
+   
+</head>
+<body>
+    <p>선택 : </p>
+    <select name="food" id="food">
+        <option value="1">설렁탕</option>
+        <option value="2">죽</option>
+        <option value="3">김볶밥</option>
+        <option value="4">떡볶이</option>
+        <option value="5">카레우동</option>
+    </select>
+</body>
+</html>

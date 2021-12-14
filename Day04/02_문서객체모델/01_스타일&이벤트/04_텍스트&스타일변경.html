@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMContentLoaded</title>
+
+    <script>
+       // DOMContentLoaded 이벤트를 연결합니다.
+       document.addEventListener('DOMContentLoaded', () => {
+            // 여러 요소를 리스트로 읽어온다.
+            const headers = document.querySelectorAll('h1')         // $(h1)
+
+            // forEach 메서드
+            // : 배열 등의 자료구조의 요소를 모두 반복하는 반복문
+            headers.forEach( (header) => {
+                header.textContent = '내일은 문서객체 모델을 알아보겠습니다.'
+                header.style.color = 'white'
+                header.style.backgroundColor = 'black'
+                header.style.padding = '20px'
+            })
+       })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+</html>
