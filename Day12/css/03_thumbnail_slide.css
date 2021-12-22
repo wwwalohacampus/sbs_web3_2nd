@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+
+/* 이미지 슬라이드 박스 */
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+
+/* 기본값으로 숨긴다. 선택이 된 이미지만 보여주기 위해서 */
+.mySlides {
+    display: none;
+}
+
+
+/* 화살표 버튼, 작은 이미지 버튼 */
+.cursor {
+    cursor: pointer;
+}
+
+
+/* 이전 버튼, 다음 버튼 */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+
+/* 왼쪽 화살표  */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* 오른쪽 화살표  */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* :hover 가상선택자  */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* 이미지 슬라이드 개수 */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* 이미지 제목 */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* 썸네일 이미지 리스트 */
+.column {
+    float: left;
+    width: calc(100% / 5);
+}
+
+
+/* 비활성화된 썸네일은 투명하게 */
+.demo {
+    opacity: 0.6;
+}
+
+
+/* 선택된 썸네일은 선명하게 */
+.active,
+.demo:hover {
+    opacity: 1;
+}

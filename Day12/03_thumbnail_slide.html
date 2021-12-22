@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/03_thumbnail_slide.css">
+    <!-- jQuery lib-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 외부 스크립트 -->
+    <script src="js/03_thumbnail_slide.js"></script>
+</head>
+
+
+<body>
+    <h2 style="text-align:center">Slideshow Gallery</h2>
+
+
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="img/slide01.jpg" style="width:100%">
+        </div>
+
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="img/slide02.jpg" style="width:100%">
+        </div>
+
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="img/slide03.jpg" style="width:100%">
+        </div>
+
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="img/slide04.jpg" style="width:100%">
+        </div>
+
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="img/slide05.jpg" style="width:100%">
+        </div>
+
+
+        <!-- 화살표 -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+        <!-- 이미지 제목 -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- 작은 이미지 영역 (썸네일) -->
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="img/slide01.jpg" style="width:100%" onclick="currentSlide(1)"
+                    alt="이미지 01">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/slide02.jpg" style="width:100%" onclick="currentSlide(2)"
+                    alt="이미지 02">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/slide03.jpg" style="width:100%" onclick="currentSlide(3)"
+                    alt="이미지 03">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/slide04.jpg" style="width:100%" onclick="currentSlide(4)"
+                    alt="이미지 04">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/slide05.jpg" style="width:100%" onclick="currentSlide(5)"
+                    alt="이미지 05">
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
