@@ -11,19 +11,62 @@ $(function () {
             disableOnInteraction: true, // 인터렉션(화살표,드래그,...) 중의 자동재생 비활성화여부
         },
 
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: 1,               // 보여지는 슬라이드 개수
+        spaceBetween: 0,               // 슬라이드 간 여백
         
         /* 이펙트 */
-        // effect: '',                 // 'fade', 'coverflow', 
+        // fade
+        /*
+        effect: 'fade',               
         fadeEffect: {
-            crossFade: false,           //
+            crossFade: false,           
         },
+        */
 
+        // coverflow
+        /*
+        effect: 'coverflow',
         coverflowEffect: {
             rotate: 30,
             slideShadows: false,
         },
+        */
+
+        // cube
+        /*
+        effect: 'cube',
+        cubeEffect: {
+            slideShadows: true,
+        },
+        */
+
+        /*
+        effect: 'flip',
+        filpEffect: {
+            slideShadows: true,
+        },
+        */
+
+        // cards
+        /*
+        effect: 'cards',
+        cardsEffect: {
+            
+        },
+        */
+
+        // creative
+        /*
+        effect: 'creative',
+        creativeEffect: {
+          prev: {
+            translate: ['-100%', 0, 0],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        },
+        */
 
 
 
