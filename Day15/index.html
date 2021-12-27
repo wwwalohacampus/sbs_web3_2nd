@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 애니메이션</title>
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- scrolla.js -->
+    <script src="js/jquery.scrolla.js"></script>
+    <script src="js/jquery.scrolla.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="empty"></div>
+    <h1 class="animate__animated animate__bounce">애니메이션 적용!</h1>
+    
+    <div class="empty"></div>
+    <!-- 
+        스크롤 애니메이션 적용하기 
+        1. 스크롤 애니메이션을 적용할 요소에 특정 class 를 지정한다.
+            ex) class="animate"
+        2. 애니메이션 이름을 data-animate 속성에 지정한다.
+            ex) data-animate="bounceIn"
+        3. 애니메이션 재생시간을 data-duration 속성에 지정한다.
+            ex) data-duration="1s"
+        4. 애니메이션 지연시간을 data-delay 속성에 지정한다.
+            ex) data-delay="0.3s"
+    -->
+    <h1 class="animate" data-animate="bounceIn" data-duration="1s" data-delay="0.3s">스크롤 애니메이션 적용</h1>
+    <div class="empty"></div>
+
+
+    <div class="container">
+
+        <div class="card-box">
+            <div class="card animate" data-animate="fadeInUp" data-duration="1.2s" data-delay="0.3s">
+                <img src="img/card.jpg" alt="">
+                <div class="title">이미지 제목 01</div>
+            </div>
+
+            <div class="card animate" data-animate="fadeInUp" data-duration="1.2s" data-delay="0.6s">
+                <img src="img/card.jpg" alt="">
+                <div class="title">이미지 제목 02</div>
+            </div>
+
+            <div class="card animate" data-animate="fadeInUp" data-duration="1.2s" data-delay="0.9s">
+                <img src="img/card.jpg" alt="">
+                <div class="title">이미지 제목 03</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="empty"></div>
+
+</body>
+</html>
