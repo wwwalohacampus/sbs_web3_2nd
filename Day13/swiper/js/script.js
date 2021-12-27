@@ -73,7 +73,7 @@ $(function () {
         // 페이지 네이션 (• • • • •)
         pagination: {
             el: '.swiper-pagination',       // 페이지 네이션이 적용될 요소 (선택자)
-            type: 'bullets',            // 'bullets'        : • • • 
+            type: 'bullets',                // 'bullets'        : • • • 
                                             // 'fraction'       : (현재번호/전체번호) 
                                             // 'progressbar'    : 진행률(게이지)
                                             // 'custom'         

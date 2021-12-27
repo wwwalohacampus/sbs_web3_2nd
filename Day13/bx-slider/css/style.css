@@ -4,6 +4,15 @@
     margin: 200px auto;
 }
 
+/* 슬라이드 */
+.slide { 
+    width: auto;
+    height: 480px;
+}
+
+/* 슬라이드 이미지 */
+.slide img { width: 100%; height: 100%; }
+
 /* 기본 커스텀 */
 .bx-wrapper {
     -moz-box-shadow: 0 0 0 transparent;
@@ -54,11 +63,3 @@
 
 
 
-/* 슬라이드 */
-.slide { 
-    width: auto;
-    height: 480px;
-}
-
-/* 슬라이드 이미지 */
-.slide img { width: 100%; height: 100%; }
