@@ -1,0 +1,46 @@
+@keyframes svg {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -4320px 0px;
+  }
+}
+.svg {
+  animation-duration: 3000ms;
+  animation-timing-function: steps(180);
+  /* 마지막 프레임에서 애니메이션 멈춤 */
+  animation-fill-mode: forwards;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+
+.svg.animate__animated {
+  animation-name: svg;
+}
+
+
+/*  */
+
+@keyframes svg100 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -18000px 0px;
+  }
+}
+.svg100 {
+  animation-duration: 3000ms;
+  animation-timing-function: steps(180);
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.svg100.animate__animated {
+  animation-name: svg100;
+}
+
