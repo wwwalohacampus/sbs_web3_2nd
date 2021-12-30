@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="vendors/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullpage.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			// 1. 풀페이지를 적용할 선택자 지정
+			$('#fullpage').fullpage({
+
+				// 2. 옵션 지정
+				// 섹션(슬라이드) 배경색
+				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', 'cornflowerblue'],
+				// 스크롤 속도
+				scrollingSpeed: 500,
+				// 연결 링크 (메뉴)
+				menu: '#menu',
+				anchors: ['page1','page2','page3','page4','footer'],
+				// 스크롤바 여부
+				scrollBar: false,
+				// 키보드 사용 여부
+				keyboardScrolling: true,
+				// 네비게이션 여부
+				navigation: true,
+				// 네비게이션 위치
+				navigationPosition: 'right',
+				
+				// 페이지 내 슬라이드 화살표 여부
+				controlArrows: true,
+
+				// 이벤트
+				// 페이지 이동 시
+				onLeave: function(origin, destination, direction){
+					console.log('onLeave : 페이지 이동');
+					// origin 		: 이동 전 페이지
+					// destination	: 이동 후 페이지
+					// direction	: 방향	(up/down)
+					console.log('origin: ' + origin + ' / destination: ' + destination + " / direction: " + direction);
+
+					// 두 번재 페이지를 떠날 때, 글씨 색 변경(white)
+					if( origin == 2 )
+						$('#section1 h1').animate({color: 'white'}, 1000)
+				},
+				// 페이지 로드(이동) 후
+				afterLoad: function(origin, destination, direction){
+					console.log('afterLoad : 페이지 로드 후');
+					// 두 번째 페이지가 로드되고 나서, 글씨 색 변경(red)
+					if( destination == 2 )
+						$('#section1 h1').animate({color: 'red'}, 1000)
+					
+
+				},
+				afterRender: function(){},
+				afterResize: function(width, height){},
+				afterReBuild: function(){},
+				afterResponsive: function(isResponsive){},
+				// 페이지 내 슬라이드 로드 후
+				afterSlideLoad: function(section, origin, destination, direction){},
+				// 페이지 내 슬라이드 이동 시
+				onSlideLeave: function(section, origin, destination, direction){}
+				
+
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">1</a></li>
+	<li data-menuanchor="page2" ><a href="#page2">2</a></li>
+	<li data-menuanchor="page3" ><a href="#page3">3</a></li>
+	<li data-menuanchor="page4" ><a href="#page4">4</a></li>
+	<li data-menuanchor="footer" ><a href="#footer">footer</a></li>
+</ul>
+
+<div id="fullpage">
+	<div class="section active" id="section0"><h1>fullPage.js</h1></div>
+	<div class="section" id="section1">
+	    <div class="slide "><h1>Simple Demo</h1></div>
+	    <div class="slide active"><h1>Only text</h1></div>
+	    <div class="slide"><h1>And text</h1></div>
+	    <div class="slide"><h1>And more text</h1></div>
+	</div>
+	<div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+	<div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+	<footer class="section fp-auto-height" id="footer">
+		<div class="box"><h1>FOOTER</h1></div>
+	</footer>
+</div>
+
+</body>
+</html>

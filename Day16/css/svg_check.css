@@ -16,14 +16,18 @@
   background-repeat: no-repeat;
 }
 
-
+/* 
+  scrolla.js 로 스크롤영역 안에 들어오면,
+  .animate__animated 클래스가 추가 
+  → animation-name 적용
+  → 스크롤 되었을 때 애니메이션 적용
+ */
 .svg.animate__animated {
   animation-name: svg;
 }
 
 
 /*  */
-
 @keyframes svg100 {
   0% {
     background-position: 0px 0px;
